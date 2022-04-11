@@ -91,6 +91,7 @@ int main()
     printBits(sizeof(dst[0]), &dst[i]);
   status = printf("\n");
   if (status < 0) abort();
+  status = 0;
 
 //lbl_dst:
   free(dst); // malloced (CeilDiv(str_len,2))*sizeof(char)

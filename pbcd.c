@@ -1,7 +1,3 @@
-#include <stdio.h> // printf/puts for simplicity
-#include <stdlib.h> // abort
-#include <assert.h>
-
 #include "pbcd.h"
 
 // assume: little endian

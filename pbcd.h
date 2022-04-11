@@ -1,26 +1,7 @@
 #ifndef PBCD_H
 #define PBCD_H
 
-#include <stdint.h> // uint32_t, uint8_t
-
-#ifdef TRUE
-#error "TRUE already defined"
-#else
-#define TRUE (1==1)
-#endif
-
-#ifdef FALSE
-#error "False already defined"
-#else
-#define FALSE (!TRUE)
-#endif
-
-// existence of typedefs can not be checked within macros
-//#define _TYPEDEF_
-#ifndef __cplusplus // disable clang complains
-typedef enum { false = FALSE, true } bool;
-#endif // __cplusplus
-//#endif
+#include "common.h"
 
 /// assume: src points to string with 4 byte len_info prefixed
 /// assume: dst points to string with 4 byte len_info prefixed, len == ceil(len_src/2)
