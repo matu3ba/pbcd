@@ -25,5 +25,6 @@ lbl_dst:
   free(hd.dst); // malloced (CeilDiv(str_len,2))*sizeof(char)
 lbl_src:
   free(hd.src); // malloced (prefix_len+str_len)*sizeof(char)
-  return status;
+  CHECK_EQ(status, 0);
+  CHECK_EQ(hd.dst, 0xabc0); // TODO docs: how do we compare pointer addresses?
 }

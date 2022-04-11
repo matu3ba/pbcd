@@ -51,7 +51,6 @@ uint32_t CeilDiv_AssumeU32(uint32_t x, uint32_t y)
 
 int prepareData(struct HelperData* hd, const char* input)
 {
-  int status = 0;
   hd->prefix_len = 4;
   hd->str_len = Str_Len(input);
   hd->src_mem_len = hd->prefix_len+hd->str_len;
